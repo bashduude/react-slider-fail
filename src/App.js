@@ -157,7 +157,7 @@ class App extends Component {
     //swiped right
     if (this.state.swipedx === true && this.state.touchesx[0] <
     this.state.touchesx[1] && this.state.currimage === Image4) {
-      console.log("swiped right to image-5");
+      console.log("swiped right to image-3");
       this.setState({
         swipedx:false,
         touchesx: [],
