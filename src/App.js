@@ -142,10 +142,22 @@ class App extends Component {
         swipedy:false,
       })
     }
-    //swiped right
+    //swiped left
     if (this.state.swipedx === true && this.state.touchesx[0] <
-    this.state.touchesx[1] && this.state.currimage === Image5) {
-      console.log("swiped right to image-4");
+    this.state.touchesx[1] && this.state.currimage === Image4) {
+      console.log("swiped right to image-5");
+      this.setState({
+        swipedx:false,
+        touchesx: [],
+        movex: [],
+        currimage: Image5,
+      })
+    }
+
+    //swiped left
+    if (this.state.swipedx === true && this.state.touchesx[0] <
+    this.state.touchesx[1] && this.state.currimage === Image3) {
+      console.log("swiped left to image-4");
       this.setState({
         swipedx:false,
         touchesx: [],
@@ -153,85 +165,73 @@ class App extends Component {
         currimage: Image4,
       })
     }
-
     //swiped right
-    if (this.state.swipedx === true && this.state.touchesx[0] <
+    if (this.state.swipedx === true && this.state.touchesx[0] >
     this.state.touchesx[1] && this.state.currimage === Image4) {
       console.log("swiped right to image-3");
       this.setState({
         swipedx:false,
-        touchesx: [],
-        movex: [],
-        currimage: this.state.thirdimage,
+        movex:[],
+        touchesx:[],
+        currimage: Image3,
       })
     }
-    //swiped left
+
+    //swiped right
     if (this.state.swipedx === true && this.state.touchesx[0] >
-    this.state.touchesx[1] && this.state.currimage === Image3) {
-      console.log("swiped left to image-4");
+    this.state.touchesx[1] && this.state.currimage === Image5) {
+      console.log("swiped right to image-4");
       this.setState({
         swipedx:false,
         movex:[],
         touchesx:[],
-        currimage: this.state.fourthimage,
-      })
-    }
-
-    //swiped left
-    if (this.state.swipedx === true && this.state.touchesx[0] >
-    this.state.touchesx[1] && this.state.currimage === Image4) {
-      console.log("swiped left to image-3");
-      this.setState({
-        swipedx:false,
-        movex:[],
-        touchesx:[],
-        currimage: this.state.fifthimage,
-      })
-    }
-    //swiped down
-    if (this.state.swipedy === true && this.state.touchesy[0] <
-    this.state.touchesy[1] && this.state.currimage === Image1) {
-      console.log("swiped down to image-2");
-      this.setState({
-        swipedy:false,
-        touchesy: [],
-        movey: [],
-        currimage: this.state.secondimage,
-      })
-    }
-
-    //swiped down
-    if (this.state.swipedy === true && this.state.touchesy[0] <
-    this.state.touchesy[1] && this.state.currimage === Image2) {
-      console.log("swiped down to image-3");
-      this.setState({
-        swipedy:false,
-        touchesy: [],
-        movey: [],
-        currimage: this.state.thirdimage,
+        currimage: Image4,
       })
     }
     //swiped up
-    if (this.state.swipedy === true && this.state.touchesy[0] >
+    if (this.state.swipedy === true && this.state.touchesy[0] <
     this.state.touchesy[1] && this.state.currimage === Image2) {
       console.log("swiped up to image-1");
       this.setState({
         swipedy:false,
-        movey:[],
-        touchesy:[],
-        currimage: this.state.firstimage,
+        touchesy: [],
+        movey: [],
+        currimage: Image1,
       })
     }
 
     //swiped up
-    if (this.state.swipedy === true && this.state.touchesy[0] >
+    if (this.state.swipedy === true && this.state.touchesy[0] <
     this.state.touchesy[1] && this.state.currimage === Image3) {
       console.log("swiped up to image-2");
       this.setState({
         swipedy:false,
+        touchesy: [],
+        movey: [],
+        currimage: Image2,
+      })
+    }
+    //swiped down
+    if (this.state.swipedy === true && this.state.touchesy[0] >
+    this.state.touchesy[1] && this.state.currimage === Image1) {
+      console.log("swiped down to image-2");
+      this.setState({
+        swipedy:false,
         movey:[],
         touchesy:[],
-        currimage: this.state.secondimage,
+        currimage: Image2,
+      })
+    }
+
+    //swiped down
+    if (this.state.swipedy === true && this.state.touchesy[0] >
+    this.state.touchesy[1] && this.state.currimage === Image2) {
+      console.log("swiped down to image-3");
+      this.setState({
+        swipedy:false,
+        movey:[],
+        touchesy:[],
+        currimage: Image3,
       })
     }
 
